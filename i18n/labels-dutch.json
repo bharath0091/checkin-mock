@@ -1,0 +1,6 @@
+{
+    "booking.code" : "Boekingscode",
+    "family.name" : "Achternaam",
+    "flight.number" : "Flight nummer",
+    "flight.date" : "Flight date"
+}
