@@ -1,14 +1,14 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+//let parser = require('accept-language-parser'); // TODO
+//https://www.npmjs.com/package/accept-language-parser
 
-var bodyParser = require('body-parser');
-router.use(bodyParser.json());
+let bodyParser = require('body-parser');
 
-let i18n = require("../i18n");
+let i18n = require("../modules/i18n");
 
 router.get('/language/:language', function(req, res) {
-    var a = null;
-    a.toString();
+    console.log(req.headers["accept-language"] );
     let lables = i18n(req.params.language);
     if (lables) {
         res.writeHead(200, "Ok", {"Context-Type": "json/plain"});
